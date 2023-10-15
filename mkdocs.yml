@@ -1,0 +1,15 @@
+site_name: SEUTrafficRef
+
+nav:
+  - Home: index.md
+  - 知识: knowledge.md
+  - 工具: tools.md
+  - 未来: future.md
+  - 关于我们: aboutUs.md
+
+theme: bootstrap
+
+
+
+plugins:
+  - search
