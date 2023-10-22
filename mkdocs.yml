@@ -1,11 +1,12 @@
-site_name: SEUTrafficRef
+site_name: TrafficSelfLearning
 
 nav:
   - Home: index.md
   - 知识: knowledge.md
   - 工具: tools.md
   - 未来: future.md
-  - 关于我们: aboutUs.md
+  - 我要分享: contribute.md
+  - 好东西: aboutUs.md
 
 theme: bootstrap
 
