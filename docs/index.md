@@ -1,36 +1,22 @@
 # SEU的交通工程
 
----
-目录
-
-[TOC]
-
-## 开篇词 (起个文化人的名字)
-
----
-
 推荐开篇词小于17行
 
 ## 导航
 
----
+<dl>
+   <dt> <a href="knowledge">知识</a> </dt>
+        <dd>知识模块的简要介绍</dd>
 
-<details> <summary> <a href="knowledge">知识</a>: 该模块包含SEU交通工程本科课程</summary>
-contents ...
-</details>
+   <dt> <a href="tools">工具</a> </dt>
+        <dd>工具模块的简要介绍</dd>
 
-<details> <summary> <a href="tools">工具</a>: 该模块包含SEU交通工程本科所需工具</summary>
-contents ...
-</details>
+   <dt> <a href="future">未来</a> </dt>
+        <dd>未来发展方向的简要介绍</dd>
 
-<details> <summary> <a href="future">未来</a>: 该模块包含SEU交通工程本科未来发展方向</summary>
-contents ...
-</details>
+   <dt> <a href="contribute">投稿</a> </dt>
+        <dd>投稿方式的简要介绍</dd>
 
-<details> <summary> <a href="contribute">投稿</a>: 该模块包含如何为本网页投稿</summary>
-contents ...
-</details>
-
-<details> <summary> <a href="goodStuff">好东西</a>: 一点点好东西</summary>
-contents ...
-</details>
+   <dt> <a href="goodStuff">好东西</a> </dt>
+        <dd>一点点好东西</dd>
+</dl>
