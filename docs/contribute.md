@@ -1,7 +1,81 @@
 # 如何投稿
 
-投稿要求
+[TOC]
 
-投稿方式
+## 投稿要求
 
-稿件模板
+
+
+## 投稿方式
+
+### 方式1 通过 GitHub 投稿 (推荐)
+
+**Note:** 如果你的投稿中有附件，请使用[方式2](#方式2-通过邮件投稿)将附件以邮件的形式发送给我们，当你的 pull request 被成功合并、附件审核完成后，我们会为你提供的附件添加链接
+
+1. 复刻仓库: 单击 `Fork` 按钮，在你的账号下创建 [`Traffic-self-learning`](https://github.com/TransFresh/Traffic-self-learning) 仓库的副本
+
+    ![Fork 仓库](contributeMDpictures\fork.png)
+
+2. 将复刻的仓库克隆到本地
+
+    ```bash
+    git clone https://github.com/YOUR USER NAME/Traffic-self-learning
+    ```
+
+3. 为原始仓库 (即本站点仓库) 创建远程关联
+
+    ```bash
+    git remote add upstream https://github.com/TransFresh/Traffic-self-learning.git
+    ```
+
+    使用 `-v` 命令检查当前仓库已配置的远程仓库，得到如下输出
+
+    ```text
+    origin  https://github.com/YOUR USER NAME/Traffic-self-learning.git  (fetch)
+    origin  https://github.com/YOUR USER NAME/Traffic-self-learning.git  (push)
+    upstream  https://github.com/TransFresh/Traffic-self-learning.git  (fetch)
+    upstream  https://github.com/TransFresh/Traffic-self-learning.git  (push)
+    ```
+
+4. 在本地仓库创建一个新的分支
+
+    ```bash
+    git checkout -b YOUR BRANCH NAME
+    ```
+
+5. 从 upstream 分支上拉取最新代码
+
+    ```bash
+    git fetch upstream
+    git merge upstream/origin
+    ```
+
+6. 将最新代码同步至你的远程仓库 (复刻的仓库)
+
+    如果当前已经是最新版本，则不需要进行此步骤
+
+    ```bash
+    git push origin origin
+    ```
+
+7. 添加你想要投稿的内容
+
+8. 将投稿内容推送到你的远程仓库
+
+    ```bash
+    git add YOUR NEW CONTENT
+    git commit -m "Your description to the new content"
+    git push origin YOUR BRANCH NAME
+    ```
+
+9. 当投稿内容被成功推送到远程仓库后，在仓库主页点击 `Compare & pull request` 按钮进入 `pull request` 界面，**选择我们仓库的temp分支**
+
+    ![pull request](contributeMDpictures\pull_request.png)
+
+### 方式2 通过邮件投稿
+
+直接将你的稿件和资料等通过邮件的形式发送给我们，邮件地址为: <seu_tcctt@163.com>
+
+为了防止邮件中遗漏重要的信息，我们推荐你参考这份[模板](ContributeContent/template.md)
+
+我们建议你使用 Markdown 的格式投稿，但你也可以选择其他易于查看、编辑的文件格式进行投稿。为了保证文件格式的一致性，我们可能会对你的稿件进行修改 (主要是格式上的调整) ，并将修改后的稿件重新发送给你，如果你同意我们的修改，则你的内容在不久后就会被添加在网页中。
