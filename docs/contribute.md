@@ -13,6 +13,7 @@
 1. 复刻仓库: 单击 `Fork` 按钮，在你的账号下创建 [`Traffic-self-learning`](https://github.com/TransFresh/Traffic-self-learning) 仓库的副本
 
     ![Fork 仓库](./contributeMDpictures/fork.png)
+    ![Creat fork](./contributeMDpictures/create_fork.png)
 
 2. 将复刻的仓库克隆到本地
 
@@ -63,11 +64,11 @@
     ```bash
     git add YOUR NEW CONTENT
     git commit -m "Your description to the new content"
-    git push origin YOUR BRANCH NAME
+    git push -u origin YOUR BRANCH NAME
     ```
 
-9. 当投稿内容被成功推送到远程仓库后，在仓库主页点击 `Compare & pull request` 按钮进入 `pull request` 界面，**选择我们仓库的temp分支**
-
+9. 当投稿内容被成功推送到远程仓库后，在仓库主页点击 `Compare & pull request` 按钮进入 `pull request` 界面，**选择我们仓库的dev分支**
+    ![compare& pull request](./contributeMDpictures/compare&pull_request.png)
     ![pull request](./contributeMDpictures/pull_request.png)
 
 ### 方式2 通过邮件投稿
