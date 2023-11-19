@@ -17,7 +17,7 @@
    <dt> <a href="contribute">投稿</a> </dt>
         <dd>投稿方式的简要介绍</dd>
 
-   <dt> <a href="goodStuff">好东西</a> </dt>
+   <dt> <a href="good_stuff">好东西</a> </dt>
         <dd>一点点好东西</dd>
 </dl>
 
