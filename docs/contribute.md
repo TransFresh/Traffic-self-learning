@@ -12,7 +12,9 @@
 
 1. 复刻仓库: 单击 `Fork` 按钮，在你的账号下创建 [`Traffic-self-learning`](https://github.com/TransFresh/Traffic-self-learning) 仓库的副本
 
-    ![Fork 仓库](./contributeMDpictures/fork.png)
+    ![Fork 仓库](./Attachments/fork.png)
+
+    ![Creat fork](./Attachments/create_fork.png)
 
 2. 将复刻的仓库克隆到本地
 
@@ -63,12 +65,12 @@
     ```bash
     git add YOUR NEW CONTENT
     git commit -m "Your description to the new content"
-    git push origin YOUR BRANCH NAME
+    git push -u origin YOUR BRANCH NAME
     ```
 
-9. 当投稿内容被成功推送到远程仓库后，在仓库主页点击 `Compare & pull request` 按钮进入 `pull request` 界面，**选择我们仓库的temp分支**
-
-    ![pull request](./contributeMDpictures/pull_request.png)
+9. 当投稿内容被成功推送到远程仓库后，在仓库主页点击 `Compare & pull request` 按钮进入 `pull request` 界面，**选择我们仓库的dev分支**
+    ![compare& pull request](./Attachments/compare&pull_request.png)
+    ![pull request](./Attachments/pull_request.png)
 
 ### 方式2 通过邮件投稿
 
@@ -76,4 +78,4 @@
 
 为了防止邮件中遗漏重要的信息，我们推荐你参考这份[模板](./ContributeContent/template.md)
 
-我们建议你使用 Markdown 的格式投稿，但你也可以选择其他易于查看、编辑的文件格式进行投稿。为了保证文件格式的一致性，我们可能会对你的稿件进行修改 (主要是格式上的调整) ，并将修改后的稿件重新发送给你，如果你同意我们的修改，则你的内容在不久后就会被添加到网页中。
+我们建议你使用 Markdown 的格式投稿 (排版格式参考: [Markdown 排版要求](./ContributeContent/markdown_format.md))，但你也可以选择其他易于查看、编辑的文件格式进行投稿。为了保证文件格式的一致性，我们可能会对你的稿件进行修改 (主要是格式上的调整) ，并将修改后的稿件重新发送给你，如果你同意我们的修改，则你的内容在不久后就会被添加到网页中。
