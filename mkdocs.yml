@@ -5,8 +5,8 @@ nav:
   - 知识: knowledge.md
   - 工具: tools.md
   - 未来: future.md
+  - 好东西: good_stuff.md
   - 我要分享: contribute.md
-  - 好东西: goodStuff.md
 
 theme:
   name: material
