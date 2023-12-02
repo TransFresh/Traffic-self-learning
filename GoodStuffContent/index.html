@@ -267,12 +267,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="../contribute/" class="md-tabs__link">
+      <a href="../good_stuff/" class="md-tabs__link">
         
   
     
   
-  我要分享
+  好东西
 
       </a>
     </li>
@@ -284,12 +284,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="../goodStuff.md" class="md-tabs__link">
+      <a href="../contribute/" class="md-tabs__link">
         
   
     
   
-  好东西
+  我要分享
 
       </a>
     </li>
@@ -411,11 +411,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute/" class="md-nav__link">
+      <a href="../good_stuff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    我要分享
+    好东西
   </span>
   
 
@@ -430,11 +430,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../goodStuff.md" class="md-nav__link">
+      <a href="../contribute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    好东西
+    我要分享
   </span>
   
 
@@ -463,6 +463,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    短内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    长内容
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -477,7 +499,26 @@
 
 
 <h1 id="_1">你是怎么到这里来的？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>其他地方不要的东西都堆到这里来了。</p>
+<p>其他模块的补充内容都堆到这里来了。</p>
+<p>文件组织结构:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>├── good_stuff.md
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└── GoodStuffContent
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ├── Attachments
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ├── content1.md
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    ├── ...
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ├── contentn.md
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    └── README.md
+</span></code></pre></div>
+<ul>
+<li><code>good_stuff.md</code> 文件：整个 <code>好东西</code> 模块的索引，短内容</li>
+<li><code>GoodStuffConent</code> 文件夹：存储工具相关的内容</li>
+<li><code>Attachments</code> 文件夹：存储 <code>好东西</code> 模块用到的图片等资源文件</li>
+<li><code>content.md</code>文件：你的正文</li>
+</ul>
+<h2 id="_2">短内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>如果你想添加的内容不是很长，完全可以直接写在 <code>./good_stuff.md</code>，如果添加的内容中包含图片，则将图片放在 <code>./Attachments</code> 中。</p>
+<h2 id="_3">长内容<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>如果你想添加的内容很长，可以在 <code>./good_stuff.md</code> 文件里面写一下 <strong>标题</strong>，<strong>内容简介</strong>，<strong>正文链接</strong>，并把正式的内容以 Markdown 文件的形式添加在 <code>./GoodStuffContent/</code> 中，如果你的内容附有图片，则将图片全部放在 <code>./GoodStuffContent/Attachments</code> 中(记得在正文里修改对应图片的引用)。</p>
 
 
 
