@@ -1,6 +1,6 @@
 # To reader
 
-[Quick Start](../index.html)
+[Quick Start](../index.md)
 
 # To contributor
 
