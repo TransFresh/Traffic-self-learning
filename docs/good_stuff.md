@@ -4,7 +4,7 @@
 
 ## 正则表达式 (regular expression)
 
-不知道你在使用IDE的搜索功能时是否遇到过下图所示的按钮，`Use Regular Expression (Alt+R)`:
+不知道你在使用 IDE 的搜索功能时是否遇到过下图所示的按钮，`Use Regular Expression (Alt+R)`:
 
 ![vscode_find](./Attachments/vscode_find.png)
 
