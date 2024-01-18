@@ -1,7 +1,7 @@
 ![logo](./docs/Attachments/logo.png)
 [![](https://img.shields.io/github/stars/TransFresh/Traffic-self-learning)](https://github.com/TransFresh/Traffic-self-learning/stargazers)
-[![](https://img.shields.io/badge/release-v0.1.1 alpha-blue)](https://github.com/TransFresh/Traffic-self-learning/releases)<!-- [![](https://img.shields.io/github/v/release/TransFresh/Traffic-self-learning?color=blue)](https://github.com/TransFresh/Traffic-self-learning/releases) -->
-[![](https://img.shields.io/badge/chat-on gitter-g)]()
+[![](https://img.shields.io/badge/release-v0.1.1%20alpha-blue)](https://github.com/TransFresh/Traffic-self-learning/releases) <!-- [![](https://img.shields.io/github/v/release/TransFresh/Traffic-self-learning?color=blue)](https://github.com/TransFresh/Traffic-self-learning/releases) -->
+[![](https://img.shields.io/badge/chat-on%20gitter-g)]()
 ![](https://img.shields.io/badge/platform-windows|macos|linux-orange.svg)
 
 **交通工程自学指南**
