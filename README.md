@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/chat-on%20gitter-g)]()
 ![](https://img.shields.io/badge/platform-windows|macos|linux-orange.svg)
 
-**交通工程自学指南**
+# 交通工程自学指南
 
 **网站链接：**[TrafficSelfLearning](https://transfresh.github.io/Traffic-self-learning/)
 
@@ -12,7 +12,7 @@
 
 **如果您有更多的想法并愿意将它们分享出来，请加入我们!**
 
-**本项目免费开源，网站资源供大家学习交流使用，转载请标明出处，严谨商用，如果发现网上有人售卖相关内容，请帮忙举报。**
+**本项目免费开源，网站资源供大家学习交流使用，转载请标明出处，严禁商用，如果发现网上有人售卖相关内容，请帮忙举报。**
 
 ## 简介
 
