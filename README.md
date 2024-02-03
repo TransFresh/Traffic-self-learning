@@ -8,11 +8,11 @@
 
 **网站链接：**[TrafficSelfLearning](https://transfresh.github.io/Traffic-self-learning/)
 
-**如果网站内容对您有所帮助，希望可以点一点Star并推荐给可能需要的人。**
+**如果网站内容对你有所帮助，希望可以点一点 Star 并推荐给可能需要的人。**
 
 **如果您有更多的想法并愿意将它们分享出来，请加入我们!**
 
-**本项目免费开源，网站资源供大家学习交流使用，转载请标明出处，严禁商用，如果发现网上有人售卖相关内容，请帮忙举报。**
+**本项目免费开源，网站资源仅供大家学习交流使用，转载请标明出处，严禁商用，如果发现网上有人售卖本站所提供的内容，请帮忙举报。**
 
 ## 简介
 
@@ -26,12 +26,20 @@
 
 ## 使用
 
-请关注网站 [TrafficSelfLearning](https://transfresh.github.io/Traffic-self-learning/)，网站会有志愿者根据投稿情况定期进行维护。
+请关注网站 [TrafficSelfLearning](https://transfresh.github.io/Traffic-self-learning/)，志愿者会根据投稿情况进行定期维护。
+
+## 纠错
+
+由于作者水平所限，网站提供的内容出现问题在所难免，欢迎大家批评指正。如果你发现网站中存在描述不当、错误、链接失效等问题，请通过发邮件、提出 [issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue) 等方式告知我们。
 
 ## 投稿
 
-网站中列出了详细的投稿流程，请关注 [我要分享](https://transfresh.github.io/Traffic-self-learning/contribute/)
+网站中列出了详细的投稿流程，请关注 [我要分享](https://transfresh.github.io/Traffic-self-learning/contribute/)。
 
 ## 致谢
 
 `TrafficSelfLearning` 项目离不开每一位贡献者无私的付出，也离不开志愿者的管理和维护，感激不尽！
+
+<!-- <a href="https://github.com/PKUFlyingPig/cs-self-learning/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=TransFresh/Traffic-self-learning"/>
+</a> -->
