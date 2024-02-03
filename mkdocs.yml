@@ -17,6 +17,7 @@ theme:
     - search.highlight
     - content.code.copy
     - content.code.select
+    - content.tooltips
   palette:
     - scheme: default
       primary: indigo
