@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+    
+    
+      
+        <title>QGIS adv tech - TrafficSelfLearning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Times+New+Roman:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Times New Roman";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qgis" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="TrafficSelfLearning" class="md-header__button md-logo" aria-label="TrafficSelfLearning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TrafficSelfLearning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              QGIS adv tech
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../knowledge/" class="md-tabs__link">
+        
+  
+    
+  
+  知识
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tools/" class="md-tabs__link">
+        
+  
+    
+  
+  工具
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../future/" class="md-tabs__link">
+        
+  
+    
+  
+  未来
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../good_stuff/" class="md-tabs__link">
+        
+  
+    
+  
+  好东西
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contribute/" class="md-tabs__link">
+        
+  
+    
+  
+  我要分享
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TrafficSelfLearning" class="md-nav__button md-logo" aria-label="TrafficSelfLearning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    TrafficSelfLearning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../future/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    未来
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../good_stuff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    好东西
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    我要分享
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gis" class="md-nav__link">
+    为什么会需要GIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis_1" class="md-nav__link">
+    先吹一下QGIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis_2" class="md-nav__link">
+    QGIS基础应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis_3" class="md-nav__link">
+    QGIS高级应用
+  </a>
+  
+    <nav class="md-nav" aria-label="QGIS高级应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-qgispython" class="md-nav__link">
+    1. 在QGIS内部调用Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-python-apiqgis" class="md-nav__link">
+    2. 采用Python API在外部实现QGIS功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-python" class="md-nav__link">
+    3. 在其它版本Python中调用上述代码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!--
+ * @Author: CQZ
+ * @Date: 2023-12-11 09:08:57
+ * @Company: SEU
+-->
+<h1 id="qgis">QGIS<a class="headerlink" href="#qgis" title="Permanent link">&para;</a></h1>
+<h2 id="gis">为什么会需要GIS<a class="headerlink" href="#gis" title="Permanent link">&para;</a></h2>
+<p>交通工程不会经常去处理地理信息数据，但有时会冷不丁来一下：</p>
+<ul>
+<li>
+<p>比如项目上处理一个.shp文件，虽然有许多Python库能对付这些数据，但为什么不用一个友好的可视化窗口来处理呢？</p>
+</li>
+<li>
+<p>比如一些与地图相关的计算上，在成熟的GIS软件上通过“点一点”就能实现；</p>
+</li>
+<li>
+<p>比如做一个漂亮的路网图片给论文加加分。</p>
+</li>
+</ul>
+<p>而大多数GIS软件画画图、做一些入门级操作又不难，不妨了解一下，反正网上教程很多。</p>
+<p>主流GIS软件包括一下两个：<strong>ArcGIS</strong> 和 <strong>QGIS</strong>。前者为商业软件，国内用的人居多，专业且精度高，<del>但大都用的盗版</del>；后者是本文主要吹捧对象。</p>
+<p>因为基础教程网上很多，本文作者懂的也不多，也许后面会更新一些常用操作、相关数据处理和画图，本文不涉及这些内容。<strong>本文目前主要介绍如何用Python调用QGIS中的功能，实现批量运行。</strong> 如果以后还更新也会集中在QGIS上。</p>
+<h2 id="qgis_1">先吹一下QGIS<a class="headerlink" href="#qgis_1" title="Permanent link">&para;</a></h2>
+<p>QGIS是一个开源的基础地理信息系统平台软件，它轻量、好看、免费、开源、有Python API，ArcGIS能做的它都能做，ArcGIS不能做的它也能做。大概有这些优点（主要和AcrGIS比）：</p>
+<ul>
+<li>
+<p>轻量化，安装时不会安装一大堆没用的，占空间也小；</p>
+</li>
+<li>
+<p>综合性能较强，程序跑的快，占资源少；</p>
+</li>
+<li>
+<p>API调用相对比较方便；</p>
+</li>
+<li>
+<p>图画的好看（个人觉得）。</p>
+</li>
+</ul>
+<p>直接上链接：<a href="https://www.qgis.org/zh-Hans/site/">https://www.qgis.org/zh-Hans/site/</a>，直接上图：</p>
+<p><img alt="1" src="../Attachments/QGIS_1.png" /></p>
+<p><img alt="2" src="../Attachments/QGIS_2.gif" /></p>
+<p><img alt="3" src="../Attachments/QGIS_3.jpg" /></p>
+<h2 id="qgis_2">QGIS基础应用<a class="headerlink" href="#qgis_2" title="Permanent link">&para;</a></h2>
+<p>网上很多，以后再说。</p>
+<h2 id="qgis_3">QGIS高级应用<a class="headerlink" href="#qgis_3" title="Permanent link">&para;</a></h2>
+<p>本节主要讲解如何在Python中调用QGIS中的**工具箱**，工具箱内的所有功能都能通过Python调用，并实现批量运行。实际上所有能在QGIS软件中实现的功能都能在Python中实现，除了工具箱内的功能，本节还包括**数据输入、输出**相关功能。</p>
+<p>本文内容主要来源于<a href="https://docs.qgis.org/3.28/en/docs/pyqgis_developer_cookbook/">官方PyQGIS食谱</a>和<a href="https://qgis.org/pyqgis/3.28/">官方Python API文档</a>，以及作者的个人经历。</p>
+<h3 id="1-qgispython">1. 在QGIS内部调用Python<a class="headerlink" href="#1-qgispython" title="Permanent link">&para;</a></h3>
+<p>你可以在界面上方面板中看到一个Python的图标，点开即可启动QGIS内置的Python控制台。若面版中没有Python图标，也可以从最上方插件栏中找到。</p>
+<p><img alt="在QGIS中打开Python" src="../Attachments/rpiq.png" /></p>
+<p>界面下方会出现Python控制台，你可以像用Python IDLE一样使用它。</p>
+<p><img alt="Python控制台使用" src="../Attachments/pyctrl.png" /></p>
+<p>点击控制台上方的“显示编辑器”键，会在旁边打开编辑器并新建一个.py文件，你可以写代码、运行和保存。</p>
+<p><img alt="Python控制台使用" src="../Attachments/runpy.png" /></p>
+<p><a href="https://docs.qgis.org/3.28/en/docs/pyqgis_developer_cookbook/">官方PyQGIS食谱</a>中的代码都可以在这个编辑器中调用。接下来介绍如何在这个编辑器内实现工具箱中的功能。</p>
+<p>我们将以<code>工具箱</code> -&gt; <code>矢量通用</code> -&gt; <code>按最近的方式连接属性</code>为例，其它工具也可以类比使用。</p>
+<p><code>按最近的方式连接属性</code>可以将输入图层1中的元素按最近的距离匹配到输入图层2中的元素，输出为输入图层1的复制，但有匹配到输入图层2的附加属性。就本例来看，我们需要将一系列车辆轨迹点匹配到实际路网上，从而可以得到该车实时所在道路，这个工具就可以在几何上将每一个轨迹点匹配到距离其最近的道路线上，从而一定程度上实现路径匹配。</p>
+<p>先来看看一般怎么操作的。当打开任意工具后，会出现配置窗口，下图为<code>按最近的方式连接属性</code>的配置窗口，需要根据右侧的要求和个人需求配置左侧各项参数。本工具中必填（没有标<code>可选</code>）参数含义为</p>
+<ul>
+<li><code>输入图层</code>：需要被匹配图层，本例为轨迹图层；</li>
+<li><code>输入图层2</code>：目标匹配图层，本例为路网图层；</li>
+<li><code>最大近邻</code>：匹配结果的数量，若为2则将与被匹配元素最近的前两项作为输入，本例为1，即只取最近的匹配结果。</li>
+</ul>
+<p>点击<code>运行</code>后，工程中多了一个**被连接图层**，该图层即为所需要的输出。</p>
+<p><img alt="工具使用" src="../Attachments/exainq.png" /></p>
+<p>接下来看看如何在Python控制台中实现相同的功能。直接上代码：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;exa_tra&#39;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="s1">&#39;INPUT_2&#39;</span><span class="p">:</span> <span class="s1">&#39;路网&#39;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="s1">&#39;NEIGHBORS&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:joinbynearest&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span></code></pre></div>
+<p>字典<code>parameter</code>即上图中所配置的各项参数，其中的键即该工具所需输入参数的名称，与上图中的选项一一对应，而值即需要配置赋予的值。各项含义如下：</p>
+<ul>
+<li><code>INPUT</code>：即<code>输入图层</code>所需的图层名；</li>
+<li><code>INPUT_2</code>：即<code>输入图层2</code>所需的图层名；</li>
+<li><code>NEIGHBORS</code>：即<code>最大近邻</code>所取的值；</li>
+<li><code>OUTPUT</code>：即输出文件的名称，后面解释为什么要配置。</li>
+</ul>
+<p>执行<code>processing.run()</code>函数来运行工具，第一个参数为工具名称，第二个参数为工具的输入参数配置。以上代码为工具箱调用代码，参数可不配置<code>可选</code>项，不同工具的名称和输入参数不同，需要对应地参阅官方文档，文档中都有列出。</p>
+<p>在Python控制器运行后，会在控制器中出现下图的输出，但并没有像一般操作一样生成一个新的图层（运行的3次）：</p>
+<p><img alt="成功运行的输出" src="../Attachments/sucoutput.png" /></p>
+<p>这是由于QGIS的奇妙机制，其实图层输出到了工程文件夹中。打开<code>.qgz</code>所在文件夹，会发现多了一个<code>TEMP.gpkg</code>文件，该文件即输出，把它导入QGIS中即可。</p>
+<p>能不能在代码中顺便把这个导入完成掉呢？当然能，需要一些QGIS基础操作。在上述代码后加入一下代码：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;TEMP.gpkg&quot;</span><span class="p">,</span> <span class="s2">&quot;TEMP&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span></code></pre></div>
+<p>变量<code>vlayer</code>指向需要导入的图层，第一个参数为文件名称，第二个参数为导入后图层名称，第三个参数为该图层的坐标系。第二行代码将图层导入到当前工程中。</p>
+<p>完整代码如下：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;exa_tra&#39;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="s1">&#39;INPUT_2&#39;</span><span class="p">:</span> <span class="s1">&#39;路网&#39;</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="s1">&#39;NEIGHBORS&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:joinbynearest&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;TEMP.gpkg&quot;</span><span class="p">,</span> <span class="s2">&quot;TEMP&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span></code></pre></div>
+<p>在Python控制器中运行以上代码，即可得到与一般操作中相同的结果，即图层<code>TEMP</code>。</p>
+<h3 id="2-python-apiqgis">2. 采用Python API在外部实现QGIS功能<a class="headerlink" href="#2-python-apiqgis" title="Permanent link">&para;</a></h3>
+<p>上述操作都需要打开QGIS进行，那能不能避免打开QGIS，仅需运行一个<code>.py</code>文件来实现上述功能呢？当然可以，但显然不能直接复制上述代码直接运行，我替你试了，报错，无法识别其中的函数。</p>
+<p>这是因为QGIS中的Python控制台调用的是QGIS内部的Python，里面已经导入了其所包含的所有库，能够直接运行上述代码。</p>
+<p>难道需要在自己的Python中安装对应的库吗？我帮你看了看QGIS中Python的架构，太复杂了，倒不如把QGIS中的Python“整出来”变成自己的。也就是说，在自己的编译器上选择QGIS中Python解释器来运行你的<code>.py</code>文件，从而在外部实现上述功能。</p>
+<p>接下来你需要的就是配置你电脑的环境，将需要的部件写入环境变量中。（不会配置环境变量？百度去）步骤如下：</p>
+<ol>
+<li>在变量<code>Path</code>中写入：</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>你的QGIS所在地\QGIS\apps\Python39
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>你的QGIS所在地\QGIS\bin
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>你的QGIS所在地\QGIS\apps\qgis-ltr\bin
+</span></code></pre></div>
+<ol>
+<li>在变量<code>PYTHONPATH</code>中写入：</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>你的QGIS所在地\QGIS\apps\qgis-ltr\python
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>你的QGIS所在地\QGIS\apps\qgis-ltr\bin
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>你的QGIS所在地\QGIS\apps\qgis-ltr\python\plugins
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>你的QGIS所在地\QGIS\apps\qgis-ltr\python\qgis
+</span></code></pre></div>
+<p><strong>注意</strong>：<code>你的QGIS所在地\QGIS\apps\qgis-ltr\python\plugins</code>一定要在<code>你的QGIS所在地\QGIS\apps\qgis-ltr\python\qgis</code>的上面，因为这两个文件中都有<code>processing</code>函数，我们需要前者中的。</p>
+<p>我也不知道怎样测试是否配置成功，如果你可以从你的编译器中找到QGIS中的Python3.9.5（本文所用的QGIS版本为3.2.8），那应该成功了。截至本文的更新日期，上述配置亲测有效。</p>
+<p>接下来通过在QGIS外部写<code>.py</code>文件实现上一节的功能。新建<code>.py</code>文件后，需要导入一下库：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kn">import</span> <span class="nn">processing</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kn">from</span> <span class="nn">processing.core.Processing</span> <span class="kn">import</span> <span class="n">Processing</span>
+</span></code></pre></div>
+<p><code>qgis</code>相关库是外部<code>.py</code>文件调用QGIS的基础，而<code>processing</code>即工具箱的API。首先需要在Python中打开你的工程文件<code>.qgz</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">qgs</span> <span class="o">=</span> <span class="n">QgsApplication</span><span class="p">([],</span> <span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">qgs</span><span class="o">.</span><span class="n">initQgis</span><span class="p">()</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">project</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">p</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;你的工程所在地址/你的工程文件名.qgz&#39;</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">fileName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&#39;s applicability is&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</span></code></pre></div>
+<p>前三行进行初始化，第四行读取工程文件，第五行检验是否导入成功。当输出<code>你的工程所在地址/你的工程文件名.qgz's applicability is True</code>时，说明导入成功。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Processing</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;exa_tra&#39;</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="s1">&#39;INPUT_2&#39;</span><span class="p">:</span> <span class="s1">&#39;路网&#39;</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="s1">&#39;NEIGHBORS&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:joinbynearest&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;TEMP.gpkg&quot;</span><span class="p">,</span> <span class="s2">&quot;TEMP&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span></code></pre></div>
+<p>第一行为工具箱的初始化，后面就可以把上一节的代码复制过来就行。完整代码如下：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kn">import</span> <span class="nn">processing</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kn">from</span> <span class="nn">processing.core.Processing</span> <span class="kn">import</span> <span class="n">Processing</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">qgs</span> <span class="o">=</span> <span class="n">QgsApplication</span><span class="p">([],</span> <span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">qgs</span><span class="o">.</span><span class="n">initQgis</span><span class="p">()</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">project</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">p</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;你的工程所在地址/你的工程文件名.qgz&#39;</span><span class="p">)</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">fileName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&#39;s applicability is&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="n">Processing</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    <span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;exa_tra&#39;</span><span class="p">,</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    <span class="s1">&#39;INPUT_2&#39;</span><span class="p">:</span> <span class="s1">&#39;路网&#39;</span><span class="p">,</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    <span class="s1">&#39;NEIGHBORS&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="p">}</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:joinbynearest&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;TEMP.gpkg&quot;</span><span class="p">,</span> <span class="s2">&quot;TEMP&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="n">qgs</span><span class="o">.</span><span class="n">exitQgis</span><span class="p">()</span>
+</span></code></pre></div>
+<p>最后一行退出运行中的QGIS。</p>
+<p>如果你有多个轨迹数据需要如上操作，并需要得到导出数据，如何实现呢？首先是导入数据，QGIS能导入的数据类型很多，我们以<code>.csv</code>文件为例。假设<code>example_tra.csv</code>包含一组轨迹数据，包括点的ID、经纬度等数据，需要导入工程中生成一个图层再进行如上操作。如何在QGIS中进行导入这里不再赘述，下面主要讲解如何在上述<code>.py</code>文件中导入。</p>
+<p>导入数据应当在打开工程文件后进行，加入一下代码：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">uri</span> <span class="o">=</span> <span class="s1">&#39;file:///&#39;</span> <span class="o">+</span> <span class="s1">&#39;你的.csv文件地址&#39;</span> <span class="o">+</span> <span class="s1">&#39;?delimiter=</span><span class="si">%s</span><span class="s1">&amp;xField=</span><span class="si">%s</span><span class="s1">&amp;yField=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;导入后的图层名&#39;</span><span class="p">,</span> <span class="s1">&#39;delimitedtext&#39;</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">if</span> <span class="n">vlayer</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">pass</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Fail to load the data.&#39;</span><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span></code></pre></div>
+<p>第一行设置导入文件和方式，第一个映射变量为分离字符，后两个为在导入文件中经纬度所在列的名称；第二行设置导入后的图层名称并进行读取；第三行采用<code>vlayer.isValid()</code>检验是否读取成功；最后一行进行导入。</p>
+<p>接下来是输出。如何在QGIS中进行输出这里不再赘述，下面主要讲解如何在上述<code>.py</code>文件中输出。</p>
+<p>本例采用工具箱中的输出工具，将匹配完成的图层输出为<code>.xlsx</code>文件。类比上一节，这里直接上代码：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>        <span class="s1">&#39;LAYERS&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;输出文件地址/输出文件名.xlsx&#39;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="p">}</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:exporttospreadsheet&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">removeMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span></code></pre></div>
+<p>最后一行将我们新导入的图层删除，这样好后面的批量处理，工程中不会多出很多图层。</p>
+<p>完整代码如下：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kn">import</span> <span class="nn">processing</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="kn">from</span> <span class="nn">processing.core.Processing</span> <span class="kn">import</span> <span class="n">Processing</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">qgs</span> <span class="o">=</span> <span class="n">QgsApplication</span><span class="p">([],</span> <span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">qgs</span><span class="o">.</span><span class="n">initQgis</span><span class="p">()</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">project</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="n">p</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;你的工程所在地址/你的工程文件名.qgz&#39;</span><span class="p">)</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">fileName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&#39;s applicability is&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">uri</span> <span class="o">=</span> <span class="s1">&#39;file:///&#39;</span> <span class="o">+</span> <span class="s1">&#39;你的.csv文件地址&#39;</span> <span class="o">+</span> <span class="s1">&#39;?delimiter=</span><span class="si">%s</span><span class="s1">&amp;xField=</span><span class="si">%s</span><span class="s1">&amp;yField=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;导入后的图层名&#39;</span><span class="p">,</span> <span class="s1">&#39;delimitedtext&#39;</span><span class="p">)</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="k">if</span> <span class="n">vlayer</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>    <span class="k">pass</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Fail to load the data.&#39;</span><span class="p">)</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="n">Processing</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>    <span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;exa_tra&#39;</span><span class="p">,</span>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>    <span class="s1">&#39;INPUT_2&#39;</span><span class="p">:</span> <span class="s1">&#39;路网&#39;</span><span class="p">,</span>
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>    <span class="s1">&#39;NEIGHBORS&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>    <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span>
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="p">}</span>
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:joinbynearest&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;TEMP.gpkg&quot;</span><span class="p">,</span> <span class="s2">&quot;TEMP&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
+</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>
+</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-11-34"><a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>        <span class="s1">&#39;LAYERS&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span><span class="p">,</span>
+</span><span id="__span-11-35"><a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>        <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;输出文件地址/输出文件名.xlsx&#39;</span>
+</span><span id="__span-11-36"><a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>    <span class="p">}</span>
+</span><span id="__span-11-37"><a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:exporttospreadsheet&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">removeMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span><span id="__span-11-39"><a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>
+</span><span id="__span-11-40"><a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="n">qgs</span><span class="o">.</span><span class="n">exitQgis</span><span class="p">()</span>
+</span></code></pre></div>
+<p>现在，你可以通过修改输入、输出的文件名来对多个文件运行。</p>
+<h3 id="3-python">3. 在其它版本Python中调用上述代码<a class="headerlink" href="#3-python" title="Permanent link">&para;</a></h3>
+<p>以上代码只能在QGIS内部的Python环境下运行。假设在运行上述代码的前后，还有前置或后置任务需要在你的环境下运行，那如何实现呢？</p>
+<p>总归知道如何在cmd命令行中运行Python吧？不会我教你，在上述<code>.py</code>所在文件夹下打开命令提示符，运行以下代码：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>你的QGIS地址/QGIS/apps/Python39/python 上述代码文件名.py
+</span></code></pre></div>
+<p>现在问题转换为：如何在另一个<code>.py</code>中运行命令提示符？为了能在命令提示符中自定义参数，我们采用<code>argparse</code>模块修改上一节代码，完整代码如下：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="kn">import</span> <span class="nn">processing</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="kn">from</span> <span class="nn">processing.core.Processing</span> <span class="kn">import</span> <span class="n">Processing</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="kn">import</span> <span class="nn">argparse</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--file&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;你要导入的文件名&#39;</span><span class="p">)</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="n">qgs</span> <span class="o">=</span> <span class="n">QgsApplication</span><span class="p">([],</span> <span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="n">qgs</span><span class="o">.</span><span class="n">initQgis</span><span class="p">()</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>    <span class="n">project</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;你的工程所在地址/你的工程文件名.qgz&#39;</span><span class="p">)</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">fileName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&#39;s applicability is&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>    <span class="n">uri</span> <span class="o">=</span> <span class="s1">&#39;file:///&#39;</span> <span class="o">+</span> <span class="s1">&#39;你的.csv文件地址/&#39;</span> <span class="o">+</span> <span class="n">file</span> <span class="o">+</span> <span class="s1">&#39;.csv?delimiter=</span><span class="si">%s</span><span class="s1">&amp;xField=</span><span class="si">%s</span><span class="s1">&amp;yField=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>    <span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="s1">&#39;delimitedtext&#39;</span><span class="p">)</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    <span class="k">if</span> <span class="n">vlayer</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>        <span class="k">pass</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Fail to load the data.&#39;</span><span class="p">)</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>    <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>    <span class="n">Processing</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    <span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>        <span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="n">file</span><span class="p">,</span>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>        <span class="s1">&#39;INPUT_2&#39;</span><span class="p">:</span> <span class="s1">&#39;路网&#39;</span><span class="p">,</span>
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>        <span class="s1">&#39;NEIGHBORS&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>        <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span>
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>    <span class="p">}</span>
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>    <span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:joinbynearest&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>    <span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;TEMP.gpkg&quot;</span><span class="p">,</span> <span class="s2">&quot;TEMP&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>    <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>
+</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>    <span class="n">parameter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>            <span class="s1">&#39;LAYERS&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span><span class="p">,</span>
+</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>            <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="s1">&#39;输出文件地址/&#39;</span> <span class="o">+</span> <span class="n">file</span> <span class="o">+</span> <span class="s1">&#39;.xlsx&#39;</span>
+</span><span id="__span-13-42"><a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>        <span class="p">}</span>
+</span><span id="__span-13-43"><a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>    <span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:exporttospreadsheet&quot;</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+</span><span id="__span-13-44"><a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>    <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">removeMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</span><span id="__span-13-45"><a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>
+</span><span id="__span-13-46"><a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>    <span class="n">qgs</span><span class="o">.</span><span class="n">exitQgis</span><span class="p">()</span>
+</span><span id="__span-13-47"><a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>
+</span><span id="__span-13-48"><a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a><span class="n">main</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</span></code></pre></div>
+<p>在另一个需要实现上述代码的<code>.py</code>文件中，写入以下代码：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s2">&quot;你的QGIS地址/QGIS/apps/Python39/python 上述代码文件名.py --file 你要导入的文件名&quot;</span><span class="p">)</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</span></code></pre></div>
+<p>运行以上代码，即可实现在自己的Python环境上调用QGIS工具箱。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      
+    
+  </body>
+</html>

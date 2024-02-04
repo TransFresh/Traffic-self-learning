@@ -1,0 +1,769 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+    
+    
+      
+        <title>ABstreet exp - TrafficSelfLearning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Times+New+Roman:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Times New Roman";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#abstreet" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="TrafficSelfLearning" class="md-header__button md-logo" aria-label="TrafficSelfLearning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TrafficSelfLearning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ABstreet exp
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../knowledge/" class="md-tabs__link">
+        
+  
+    
+  
+  知识
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tools/" class="md-tabs__link">
+        
+  
+    
+  
+  工具
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../future/" class="md-tabs__link">
+        
+  
+    
+  
+  未来
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../good_stuff/" class="md-tabs__link">
+        
+  
+    
+  
+  好东西
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contribute/" class="md-tabs__link">
+        
+  
+    
+  
+  我要分享
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TrafficSelfLearning" class="md-nav__button md-logo" aria-label="TrafficSelfLearning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    TrafficSelfLearning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../future/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    未来
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../good_stuff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    好东西
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    我要分享
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 软件下载和官方文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 运行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-abstreet" class="md-nav__link">
+    3. 在ABstreet中导入自己的地图并制作自己的场景
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 在ABstreet中导入自己的地图并制作自己的场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-osm" class="md-nav__link">
+    1. 准备好你的osm地图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-abstreet" class="md-nav__link">
+    2. 在ABstreet打开自己的地图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 为自己的地图设置边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 再次导入自己的地图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 为自己的地图建立一个场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 导入自己的场景
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-abstreet" class="md-nav__link">
+    4. ABstreet更多的操作
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!--
+ * @Author: CQZ
+ * @Date: 2024-01-12 21:48:11
+ * @Company: SEU
+-->
+<h1 id="abstreet">ABstreet<a class="headerlink" href="#abstreet" title="Permanent link">&para;</a></h1>
+<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>ABstreet是一款开源交通模拟游戏（没错它自称是游戏），探索道路的微小变化如何影响骑自行车的人、公交用户、行人和司机，效果直接上图：</p>
+<p><img alt="图1" src="../Attachments/abs2.gif" /></p>
+<p><img alt="图2" src="../Attachments/abs1.gif" /></p>
+<p><img alt="图3" src="../Attachments/abs3.gif" /></p>
+<p><img alt="图4" src="../Attachments/abs4.gif" /></p>
+<p><img alt="图5" src="../Attachments/abs5.gif" /></p>
+<p>看起来作为一个开源出行链微观交通仿真软件应该很不错，但是它的核心代码是用rust写的，学习的成本一下就上来了，结果就是用的人不多（本篇作者目前没有发现有人在论文中提到这个）。</p>
+<p>但是呢，该软件在微观宏观可视化、数据可视化上还蛮好看的，运行起来也很快。因此本篇做个抛砖引玉，介绍一下基本操作，以及如何导入osm地图并运行一个自己的出行场景（本篇作者项目中干过的事儿），至于如何用该软件进行交通仿真研究就留给真正的大佬<sub>~</sub></p>
+<h2 id="1">1. 软件下载和官方文档<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>ABstreet团队提供了三个版本：网页版、编译版和源码版：</p>
+<ul>
+<li>
+<p><a href="https://play.abstreet.org/0.3.49/abstreet.html">网页版</a>：打开即玩。</p>
+</li>
+<li>
+<p><a href="https://a-b-street.github.io/docs/user/index.html">编译版</a>：在该网页中寻找适合的版本，Windows版解压后双击play_abstreet.bat即可运行，编译版无法对其内容进行修改。</p>
+</li>
+<li>
+<p><a href="https://github.com/a-b-street/abstreet">源码版</a>：去官方Github上下载，需要搭配安装了rust才能运行，能够根据需求对其内容进行修改。</p>
+</li>
+</ul>
+<p>这三个版本的操作方式和主要功能都是一样的。这里放个<a href="https://a-b-street.github.io/docs/index.html">官方文档</a>，关于如何编译源码版和rust安装都有提到，这里简单提一下如何像编译版一样打开源码版：</p>
+<ol>
+<li>
+<p>下载安装rust：根据文档中的需求在<a href="https://www.rust-lang.org/tools/install">rust官网</a>上下载对应的版本，rust可能会需要安装Visual Studio，根据提示来；</p>
+</li>
+<li>
+<p>安装检验：打开cmd，输入<code>cargo</code>后回车没报错就没问题；</p>
+</li>
+<li>
+<p>设置环境变量：<code>RUST_BACKTRACE=1</code>；</p>
+</li>
+<li>
+<p>（可选）下载官方案例：在源码版文件夹中打开命令框，运行<code>cargo run --bin updater download</code>，时间可能会很长；</p>
+</li>
+<li>
+<p>运行ABstreet：在源码版文件夹中打开命令框，运行<code>cargo run --bin game --release</code>，编译时间可能很长。</p>
+</li>
+</ol>
+<h2 id="2">2. 运行<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>三个版本打开界面都是一样的，这里以编译版为例：</p>
+<p><img alt="打开界面" src="../Attachments/abs-main.png" /></p>
+<p>左侧<code>Games</code>是游戏本体，中间<code>Planning</code>是沙盒仿真和地图设计，右侧<code>Other</code>包括了其它根据和制作团队联系方式。</p>
+<p>点击左侧的<code>Traffic simulation tutorial</code>，跟着它教程走一遍就啥都会了。</p>
+<p>NOTE：本文编辑时的版本（2024.01.07）暂时关闭了<code>Traffic simulation tutorial</code>，可以下载老版本或者等他们团队更新，听说他们一周一编译。</p>
+<h2 id="3-abstreet">3. 在ABstreet中导入自己的地图并制作自己的场景<a class="headerlink" href="#3-abstreet" title="Permanent link">&para;</a></h2>
+<p>软件运行后，打开<code>Traffic simulation sandbox</code>，右上角沙盒<code>Sandbox</code>菜单栏中左侧第一个键点击后可以换地图，软件自带很多城市的地图。本节的目的是导入自己的地图并制作一个场景，需要采用源码版。</p>
+<p><img alt="换地图" src="../Attachments/abs-map.png" /></p>
+<h3 id="1-osm">1. 准备好你的osm地图<a class="headerlink" href="#1-osm" title="Permanent link">&para;</a></h3>
+<p>去osm官网下载你需要地区的地图，然后在ABstreet根目录下打开终端，输入</p>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">cargo</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">--</span><span class="n">release</span><span class="w"> </span><span class="o">--</span><span class="n">bin</span><span class="w"> </span><span class="n">cli</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">oneshot</span><span class="o">-</span><span class="n">import</span><span class="w"> </span><span class="err">自己的地图的位置\自己的地图</span><span class="p">.</span><span class="n">osm</span>
+</span></code></pre></div>
+<p>最后一行没有说不成功就成功了，成功后会在ABstreet根目录下<code>data\system\zz\oneshot\maps</code>里面有<code>自己的地图.bin</code>。</p>
+<h3 id="2-abstreet">2. 在ABstreet打开自己的地图<a class="headerlink" href="#2-abstreet" title="Permanent link">&para;</a></h3>
+<p>在<code>Sandbox</code>地图选择列表最下面就是自己的地图，能看但不能用，因为该软件默认交通从地图的边界生成，但目前自己的地图还没有设置边界，交通无法生成。</p>
+<p><img alt="找到自己的地图" src="../Attachments/abs-cutmap.png" /></p>
+<h3 id="3">3. 为自己的地图设置边界<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>在主菜单<code>Other</code>中点击<code>Advance tools</code>，在下一个界面中可以选择需要编辑的地图，设置为自己的地图，然后点击<code>draw a polygon</code>。</p>
+<p>在图上随意点超过三个点就会形成蓝色多边形，多边形内就是所截区域，多边形边界所截道路会在之后变成边界点能够生成从地图外进来的车和人。</p>
+<p>点上方按键保存（没错你点完一点反应都没有），然后在ABstreet根目录下会出现
+<code>name goes here.geojson</code>，可以自己换个名字，比如<code>自己的地图边界.geojson</code>。</p>
+<p><img alt="找到自己的地图" src="../Attachments/abs-b.png" /></p>
+<h3 id="4">4. 再次导入自己的地图<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>在ABstreet根目录下打开终端，输入</p>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">cargo</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">--</span><span class="n">release</span><span class="w"> </span><span class="o">--</span><span class="n">bin</span><span class="w"> </span><span class="n">cli</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">oneshot</span><span class="o">-</span><span class="n">import</span><span class="w"> </span><span class="err">自己的地图的位置\自己的地图</span><span class="p">.</span><span class="n">osm</span><span class="w"> </span><span class="o">--</span><span class="n">clip</span><span class="o">-</span><span class="n">path</span><span class="o">=</span><span class="err">自己的地图边界的位置\自己的地图边界</span><span class="p">.</span><span class="n">geojson</span>
+</span></code></pre></div>
+<p>之后打开地图，其边界就长这个样子：</p>
+<p><img alt="找到自己的地图边界" src="../Attachments/abs-bnow.png" /></p>
+<p>至此地图部分已经完成了。</p>
+<h3 id="5">5. 为自己的地图建立一个场景<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>一个场景<code>scenario</code>，即在这个地图中需要仿真的所有出行者的出行链，每一个出行者可以有多个行程，每个行程包括：</p>
+<ul>
+<li>行程开始和结束的时间；</li>
+<li>行程开始和结束的地点经纬度坐标；</li>
+<li>行程的目的和方式。</li>
+</ul>
+<p>这些行程需要写在一个<code>.json</code>文件中，语法如下：</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;scenario_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 场景名称</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;people&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="c1">// 第一个出行者的全部行程</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">          </span><span class="nt">&quot;trips&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                </span><span class="c1">// 第一个出行者的第一个行程</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">                </span><span class="p">{</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">                    </span><span class="nt">&quot;departure&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w"> </span><span class="c1">// 旅程开始时间，据当天0点后多少秒再加4个0，例子中是0点后1秒</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">                    </span><span class="nt">&quot;origin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">                        </span><span class="nt">&quot;Position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">                        </span><span class="nt">&quot;longitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">106.477302</span><span class="p">,</span><span class="w"> </span><span class="c1">// 起点经度</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                        </span><span class="nt">&quot;latitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">29.579646</span><span class="w"> </span><span class="c1">// 起点纬度</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">                        </span><span class="p">}</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">                    </span><span class="p">},</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">                    </span><span class="nt">&quot;destination&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">                        </span><span class="nt">&quot;Position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">                        </span><span class="nt">&quot;longitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">106.608089</span><span class="p">,</span><span class="w"> </span><span class="c1">// 终点经度</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">                        </span><span class="nt">&quot;latitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">29.555661</span><span class="w"> </span><span class="c1">// 终点纬度</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">                        </span><span class="p">}</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">                    </span><span class="p">},</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">                    </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Walk&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 出行方式</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">                    </span><span class="c1">// 可选方式包括：&#39;Walk&#39;, &#39;Bike&#39;, &#39;Transit&#39;, &#39;Drive&#39;</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">                    </span><span class="nt">&quot;purpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Meal&quot;</span><span class="w"> </span><span class="c1">// 出行目的</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">                    </span><span class="c1">// 可选目的包括：&#39;Home&#39;, &#39;Work&#39;, &#39;School&#39;, &#39;Escort&#39;, &#39;PersonalBusiness&#39;, &#39;Shopping&#39;, &#39;Meal&#39;, &#39;Social&#39;, &#39;Recreation&#39;, &#39;Medical&#39;, &#39;ParkAndRideTransfer&#39;</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">                </span><span class="p">},</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">                </span><span class="c1">// 第一个出行者的第二个行程</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">                </span><span class="p">{</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">                    </span><span class="nt">&quot;departure&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12000000</span><span class="p">,</span><span class="w"> </span><span class="c1">// 例子中是0点后1200秒，也就是20分钟</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">                    </span><span class="nt">&quot;origin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">                        </span><span class="nt">&quot;Position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">                        </span><span class="nt">&quot;longitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">106.477302</span><span class="p">,</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">                        </span><span class="nt">&quot;latitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">29.579646</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">                        </span><span class="p">}</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">                    </span><span class="p">},</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">                    </span><span class="nt">&quot;destination&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">                        </span><span class="nt">&quot;Position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">                        </span><span class="nt">&quot;longitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">106.608089</span><span class="p">,</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">                        </span><span class="nt">&quot;latitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">29.555661</span>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">                        </span><span class="p">}</span>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">                    </span><span class="p">},</span>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">                    </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bike&quot;</span><span class="p">,</span>
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">                    </span><span class="nt">&quot;purpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Work&quot;</span>
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">            </span><span class="p">]</span>
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">         </span><span class="c1">// 第二个出行者的全部行程</span>
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">            </span><span class="nt">&quot;trips&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="w">                </span><span class="err">...</span>
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="w">              </span><span class="p">]</span>
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>保存为<code>自己的场景.json</code>放在ABstreet根目录下，然后在ABstreet根目录下打开终端，输入</p>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">cargo</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">--</span><span class="n">release</span><span class="w"> </span><span class="o">--</span><span class="n">bin</span><span class="w"> </span><span class="n">cli</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">import</span><span class="o">-</span><span class="n">scenario</span><span class="w"> </span><span class="o">--</span><span class="n">map</span><span class="o">=</span><span class="err">自己的地图</span><span class="n">bin的位置</span><span class="err">\自己的地图</span><span class="p">.</span><span class="n">bin</span><span class="w"> </span><span class="o">--</span><span class="n">input</span><span class="o">=</span><span class="err">自己的场景</span><span class="p">.</span><span class="n">json</span><span class="w"> </span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">problems</span>
+</span></code></pre></div>
+<h3 id="6">6. 导入自己的场景<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<p>打开自己的地图沙盒<code>Sandbox</code>，在沙盒菜单中点击左边第二个按键，在新的界面中选择自己的场景：</p>
+<p><img alt="找到自己的地图边界" src="../Attachments/abs-s.png" /></p>
+<p>OK，这时候就可以看到场景中有车在跑了。</p>
+<h2 id="4-abstreet">4. ABstreet更多的操作<a class="headerlink" href="#4-abstreet" title="Permanent link">&para;</a></h2>
+<p>还有更多功能，如多边形取图、与sumo交互、地图修改、颜色修改、结果导出等，等待大佬来补充<sub>~</sub></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      
+    
+  </body>
+</html>
