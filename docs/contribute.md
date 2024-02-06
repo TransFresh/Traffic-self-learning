@@ -23,19 +23,23 @@
 
 ### 方式1 通过 GitHub 投稿 (推荐)
 
-1. 复刻仓库: 单击 `Fork` 按钮，在你的账号下创建 [`Traffic-self-learning`](https://github.com/TransFresh/Traffic-self-learning) 仓库的副本
+#### Fork 及配置上游仓库
+
+1. Fork 仓库: 单击 `Fork` 按钮，在你的账号下创建 [`Traffic-self-learning`](https://github.com/TransFresh/Traffic-self-learning) 仓库的副本
+
+    **注意:** 取消勾选 `Copy the main branch only`
 
     ![Fork 仓库](./Attachments/fork.png)
 
     ![Creat fork](./Attachments/create_fork.png)
 
-2. 将复刻的仓库克隆到本地
+2. 将 Fork 仓库克隆到本地
 
     ```bash
     git clone https://github.com/YOUR USER NAME/Traffic-self-learning
     ```
 
-3. 为原始仓库 (即本站点仓库) 创建远程关联
+3. 创建 Fork 仓库的上游仓库 (源仓库)
 
     ```bash
     git remote add upstream https://github.com/TransFresh/Traffic-self-learning.git
@@ -56,24 +60,34 @@
     git checkout -b YOUR BRANCH NAME
     ```
 
-5. 从 upstream 分支上拉取最新代码
+#### Fork 仓库与源仓库同步
+
+1. 从上游拉取更新
 
     ```bash
     git fetch upstream
-    git merge upstream/origin
     ```
 
-6. 将最新代码同步至你的远程仓库 (复刻的仓库)
-
-    如果当前已经是最新版本，则不需要进行此步骤
+2. 将更新同步至 Fork 仓库 (如果当前已经是最新版本，则不需要进行此步骤)
 
     ```bash
-    git push origin origin
+    git checkout BRANCH
+    git merge upstream/BRANCH
+    git push
     ```
 
-7. 添加你想要投稿的内容
+#### 创建特性分支
 
-8. 将投稿内容推送到你的远程仓库
+我们推荐你在特性分支上完成内容修改
+
+```bash
+git checkout -b YOUR_BRANCH_NAME
+```
+
+#### 完成投稿
+
+1. 确保 Fork 仓库已同步至最新状态
+2. 将投稿内容推送到 Fork 仓库
 
     ```bash
     git add YOUR NEW CONTENT
@@ -81,9 +95,12 @@
     git push -u origin YOUR BRANCH NAME
     ```
 
-9. 当投稿内容被成功推送到远程仓库后，在仓库主页点击 `Compare & pull request` 按钮进入 `pull request` 界面，**选择我们仓库的dev分支**
+3. 当投稿内容被成功推送到远程仓库后，在仓库主页点击 `Compare & pull request` 按钮 `pull requests` 界面 (或者点击 `Pull requests` 界面选择 `pull new request`)，**选择源仓库的dev分支，选择 Fork 仓库的特性分支**
     ![compare& pull request](./Attachments/compare&pull_request.png)
     ![pull request](./Attachments/pull_request.png)
+
+4. 点击 `Create pull request`，填写描述信息
+5. 点击 `Create pull request` 完成投稿
 
 ### 方式2 通过邮件投稿
 
