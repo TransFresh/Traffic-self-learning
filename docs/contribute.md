@@ -106,6 +106,6 @@ git checkout -b YOUR_BRANCH_NAME
 
 直接将你的稿件和资料等通过邮件的形式发送给我们，邮件地址为: <seu_tcctt@163.com>
 
-为了防止邮件中遗漏重要的信息，我们推荐你参考这份[模板](./ContributeContent/template.md)
+为了防止邮件中遗漏重要的信息，我们推荐你参考这份[模板](./ContributeContent/mail_template.md)
 
 我们建议你使用 Markdown 的格式投稿 (排版格式参考: [Markdown 排版要求](./ContributeContent/markdown_format.md))，但你也可以选择其他易于查看、编辑的文件格式进行投稿。为了保证文件格式的一致性，我们可能会对你的稿件进行修改 (主要是格式上的调整) ，并将修改后的稿件重新发送给你，如果你同意我们的修改，则你的内容在不久后就会被添加到网页中。

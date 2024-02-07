@@ -37,7 +37,7 @@
 
 **注意:** 通过 Github 投稿时，需要把 PPT 等资源文件通过邮件发送给我们，不要直接上传到 Github
 
-邮箱: seu_tcctt@163.com
+邮箱: <seu_tcctt@163.com>
 
 ## 在已有课程上新增内容
 
@@ -49,8 +49,8 @@
 
 ### Step 2
 
-选择一种投稿方式进行投稿 (通过 Github 或通过邮件)，具体投稿流程请见[投稿](../contribute)
+选择一种投稿方式进行投稿 (通过 Github 或通过邮件)，具体投稿流程请见[投稿](../contribute.md)
 
 **注意:** 通过 Github 投稿时，需要把 PPT 等资源文件通过邮件发送给我们，不要直接上传到 Github
 
-邮箱: seu_tcctt@163.com
+邮箱: <seu_tcctt@163.com>
