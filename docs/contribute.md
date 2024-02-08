@@ -54,12 +54,6 @@
     upstream  https://github.com/TransFresh/Traffic-self-learning.git  (push)
     ```
 
-4. 在本地仓库创建一个新的分支
-
-    ```bash
-    git checkout -b YOUR BRANCH NAME
-    ```
-
 #### Fork 仓库与源仓库同步
 
 1. 从上游拉取更新
