@@ -5,7 +5,7 @@
 
 * 正文
   - [Markdown语法](https://markdown.com.cn)
-  - [大一下] ([https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc#%20%E3%80%8ATo%20seek,%20to%20seed.%E3%80%8B](https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc#%20%E3%80%8ATo%20seek,%20to%20seed.%E3%80%8B))
+  - [大一下](https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc#%20%E3%80%8ATo%20seek,%20to%20seed.%E3%80%8B)
 
 * 以其中的一段作为结尾：
   - 大学某种意义上，其实是高中的延续；我们选择的，不仅仅是一所学校，更是一个新的生活方式，一段新的旅程🏃‍；
