@@ -1,11 +1,11 @@
 * 写在前面
-  - 这是21-22学年当班指导期间带大一班级（东南大学交通学院21级）所写的文档。
+  - 这是答主21-22学年当班指导期间带大一班级（东南大学交通学院21级）所写的文档。
   - 内容颇为繁杂，有些干货和资源，有些感悟和建议，故放在了这一部分。
   - 主要依据19级土木交通类大一的体验，提供一些信息，仅供参考。
 
 * 正文
-  - [大一上](https://www.yuque.com/liluanke/wnn581/zytli0?singleDoc# 《未来是你们的——To 6班》)
-  - [大一下]([https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc# 《To seek, to seed.》](https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc#%20%E3%80%8ATo%20seek,%20to%20seed.%E3%80%8B))
+  - [大一上] (https://www.yuque.com/liluanke/wnn581/zytli0?singleDoc# 《未来是你们的——To 6班》)
+  - [大一下] ([https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc# 《To seek, to seed.》](https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc#%20%E3%80%8ATo%20seek,%20to%20seed.%E3%80%8B))
 
 * 以其中的一段作为结尾：
   - 大学某种意义上，其实是高中的延续；我们选择的，不仅仅是一所学校，更是一个新的生活方式，一段新的旅程🏃‍；
