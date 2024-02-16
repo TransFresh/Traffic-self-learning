@@ -6,7 +6,7 @@
 
 * 正文
   - [大一上](https://www.yuque.com/liluanke/wnn581/zytli0?singleDoc#%20%E3%80%8A%E6%9C%AA%E6%9D%A5%E6%98%AF%E4%BD%A0%E4%BB%AC%E7%9A%84%E2%80%94%E2%80%94To%206%E7%8F%AD%E3%80%8B)
-  - [大一下](https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc#%20%E3%80%8ATo%20seek,%20to%20seed.%E3%80%8B)
+  - [大一下](https://www.yuque.com/liluanke/wnn581/hggm1d?singleDoc#%20%E3%80%8ATo%20seek,%20to%20seed.%E3%80%8B)：写于2022年2月14日
 
 * 以其中的一段作为结尾：
   > 大学某种意义上，其实是高中的延续；我们选择的，不仅仅是一所学校，更是一个新的生活方式，一段新的旅程🏃‍；
