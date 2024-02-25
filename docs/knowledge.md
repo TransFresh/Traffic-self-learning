@@ -61,8 +61,7 @@ Hello!
 1. 土木交通材料导论（研讨）
 2. 交通工程基础
 3. 信息与控制基础
-4. 交通行为分析基础
-5. C/C++/Matlab基础
+4. C/C++/Matlab基础
 
 ### 道路工程基础
 
@@ -94,7 +93,7 @@ Hello!
 
 ### 交通大数据与其他
 
-1. 交通系统分析
+1. [交通系统分析](./KnowledgeContent/Traffic/交通系统分析.md)
 2. [交通大数据分析（研讨）](./KnowledgeContent/Traffic/交通大数据.md)
 3. 交通时空分析
 4. ArcGis
