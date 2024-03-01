@@ -10,7 +10,7 @@
 
 1.南京某高校体验了四年交通工程专业的学生对于专业特点的认知：
 
-> [交通工程的软学科特点与智能交通的发展](FutureContent/Content1#Viewpoint_1.md)
+> [交通工程的软学科特点与智能交通的发展](FutureContent/Viewpoint_1.md)
 
 ## 就业方向
 
