@@ -506,6 +506,40 @@
     方式1 通过 GitHub 投稿 (推荐)
   </a>
   
+    <nav class="md-nav" aria-label="方式1 通过 GitHub 投稿 (推荐)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fork" class="md-nav__link">
+    Fork 及配置上游仓库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fork_1" class="md-nav__link">
+    Fork 仓库与源仓库同步
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    创建特性分支
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    完成投稿
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -581,6 +615,40 @@
     方式1 通过 GitHub 投稿 (推荐)
   </a>
   
+    <nav class="md-nav" aria-label="方式1 通过 GitHub 投稿 (推荐)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fork" class="md-nav__link">
+    Fork 及配置上游仓库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fork_1" class="md-nav__link">
+    Fork 仓库与源仓库同步
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    创建特性分支
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    完成投稿
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -628,19 +696,21 @@
 <h2 id="_4">投稿方式<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>我们提供如下两种投稿方式: 通过 GitHub ，通过邮件。你可以选择任意一种方式进行投稿，如果你在投稿的同时还希望上传资源文件，请使用<a href="#方式2-通过邮件投稿">方式2</a>将资源文件以邮件形式发送给我们，当你的 pull request 被成功合并、资源文件审核完成后，我们会为你提供的资源文件添加链接。</p>
 <h3 id="1-github">方式1 通过 GitHub 投稿 (推荐)<a class="headerlink" href="#1-github" title="Permanent link">&para;</a></h3>
+<h4 id="fork">Fork 及配置上游仓库<a class="headerlink" href="#fork" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>复刻仓库: 单击 <code>Fork</code> 按钮，在你的账号下创建 <a href="https://github.com/TransFresh/Traffic-self-learning"><code>Traffic-self-learning</code></a> 仓库的副本</p>
+<p>Fork 仓库: 单击 <code>Fork</code> 按钮，在你的账号下创建 <a href="https://github.com/TransFresh/Traffic-self-learning"><code>Traffic-self-learning</code></a> 仓库的副本</p>
+<p><strong>注意:</strong> 取消勾选 <code>Copy the main branch only</code></p>
 <p><img alt="Fork 仓库" src="../Attachments/fork.png" /></p>
 <p><img alt="Creat fork" src="../Attachments/create_fork.png" /></p>
 </li>
 <li>
-<p>将复刻的仓库克隆到本地</p>
+<p>将 Fork 仓库克隆到本地</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/YOUR<span class="w"> </span>USER<span class="w"> </span>NAME/Traffic-self-learning
 </span></code></pre></div>
 </li>
 <li>
-<p>为原始仓库 (即本站点仓库) 创建远程关联</p>
+<p>创建 Fork 仓库的上游仓库 (源仓库)</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/TransFresh/Traffic-self-learning.git
 </span></code></pre></div>
 <p>使用 <code>-v</code> 命令检查当前仓库已配置的远程仓库，得到如下输出</p>
@@ -650,42 +720,49 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>upstream  https://github.com/TransFresh/Traffic-self-learning.git  (push)
 </span></code></pre></div>
 </li>
+</ol>
+<h4 id="fork_1">Fork 仓库与源仓库同步<a class="headerlink" href="#fork_1" title="Permanent link">&para;</a></h4>
+<ol>
 <li>
-<p>在本地仓库创建一个新的分支</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>YOUR<span class="w"> </span>BRANCH<span class="w"> </span>NAME
+<p>从上游拉取更新</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>upstream
 </span></code></pre></div>
 </li>
 <li>
-<p>从 upstream 分支上拉取最新代码</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>upstream
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>merge<span class="w"> </span>upstream/origin
+<p>将更新同步至 Fork 仓库 (如果当前已经是最新版本，则不需要进行此步骤)</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>BRANCH
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>merge<span class="w"> </span>upstream/BRANCH
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>git<span class="w"> </span>push
 </span></code></pre></div>
 </li>
-<li>
-<p>将最新代码同步至你的远程仓库 (复刻的仓库)</p>
-<p>如果当前已经是最新版本，则不需要进行此步骤</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>origin
+</ol>
+<h4 id="_5">创建特性分支<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>我们推荐你在特性分支上完成内容修改</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>YOUR_BRANCH_NAME
 </span></code></pre></div>
-</li>
+<h4 id="_6">完成投稿<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ol>
+<li>确保 Fork 仓库已同步至最新状态</li>
 <li>
-<p>添加你想要投稿的内容</p>
-</li>
-<li>
-<p>将投稿内容推送到你的远程仓库</p>
+<p>将投稿内容推送到 Fork 仓库</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>add<span class="w"> </span>YOUR<span class="w"> </span>NEW<span class="w"> </span>CONTENT
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Your description to the new content&quot;</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>YOUR<span class="w"> </span>BRANCH<span class="w"> </span>NAME
 </span></code></pre></div>
 </li>
 <li>
-<p>当投稿内容被成功推送到远程仓库后，在仓库主页点击 <code>Compare &amp; pull request</code> 按钮进入 <code>pull request</code> 界面，<strong>选择我们仓库的dev分支</strong>
+<p>当投稿内容被成功推送到远程仓库后，在仓库主页点击 <code>Compare &amp; pull request</code> 按钮 <code>pull requests</code> 界面 (或者点击 <code>Pull requests</code> 界面选择 <code>pull new request</code>)，<strong>选择源仓库的dev分支，选择 Fork 仓库的特性分支</strong>
     <img alt="compare&amp; pull request" src="../Attachments/compare%26pull_request.png" />
     <img alt="pull request" src="../Attachments/pull_request.png" /></p>
 </li>
+<li>
+<p>点击 <code>Create pull request</code>，填写描述信息</p>
+</li>
+<li>点击 <code>Create pull request</code> 完成投稿</li>
 </ol>
 <h3 id="2">方式2 通过邮件投稿<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <p>直接将你的稿件和资料等通过邮件的形式发送给我们，邮件地址为: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#117;&#95;&#116;&#99;&#99;&#116;&#116;&#64;&#49;&#54;&#51;&#46;&#99;&#111;&#109;">&#115;&#101;&#117;&#95;&#116;&#99;&#99;&#116;&#116;&#64;&#49;&#54;&#51;&#46;&#99;&#111;&#109;</a></p>
-<p>为了防止邮件中遗漏重要的信息，我们推荐你参考这份<a href="../ContributeContent/template/">模板</a></p>
+<p>为了防止邮件中遗漏重要的信息，我们推荐你参考这份<a href="../ContributeContent/mail_template/">模板</a></p>
 <p>我们建议你使用 Markdown 的格式投稿 (排版格式参考: <a href="../ContributeContent/markdown_format/">Markdown 排版要求</a>)，但你也可以选择其他易于查看、编辑的文件格式进行投稿。为了保证文件格式的一致性，我们可能会对你的稿件进行修改 (主要是格式上的调整) ，并将修改后的稿件重新发送给你，如果你同意我们的修改，则你的内容在不久后就会被添加到网页中。</p>
 
 
