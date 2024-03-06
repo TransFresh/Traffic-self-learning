@@ -61,7 +61,8 @@ Hello!
 1. 土木交通材料导论（研讨）
 2. 交通工程基础
 3. 信息与控制基础
-4. C/C++/Matlab基础
+4. [C++ 基础](./KnowledgeContent/Traffic/程序设计与算法语言（C++）.md)
+5. C/Matlab 基础
 
 ### 道路工程基础
 
