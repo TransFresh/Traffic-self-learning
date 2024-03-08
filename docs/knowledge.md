@@ -81,7 +81,7 @@ Hello!
 5. [城市停车设施规划与管理](./KnowledgeContent/Traffic/城市停车设施规划与管理.md)
 6. 城市公共交通规划与运营管理
 7. 运输组织学B
-8. 建设项目交通影响分析
+8. [建设项目交通影响分析](./KnowledgeContent/Traffic/建设项目交通影响分析.md)
 
 ### 交通控制与仿真
 
