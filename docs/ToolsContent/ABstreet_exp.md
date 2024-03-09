@@ -9,15 +9,9 @@
 
 ABstreet是一款开源交通模拟游戏（没错它自称是游戏），探索道路的微小变化如何影响骑自行车的人、公交用户、行人和司机，效果直接上图：
 
-![图1](Attachments/abs2.gif)
+![图1](https://a-b-street.github.io/docs/project/history/retrospective/traffic_sim.gif)
 
-![图2](Attachments/abs1.gif)
-
-![图3](Attachments/abs3.gif)
-
-![图4](Attachments/abs4.gif)
-
-![图5](Attachments/abs5.gif)
+![图2](https://a-b-street.github.io/docs/project/history/retrospective/santa.gif)
 
 看起来作为一个开源出行链微观交通仿真软件应该很不错，但是它的核心代码是用rust写的，学习的成本一下就上来了，结果就是用的人不多（本篇作者目前没有发现有人在论文中提到这个）。
 

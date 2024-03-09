@@ -37,9 +37,7 @@ QGIS是一个开源的基础地理信息系统平台软件，它轻量、好看�
 
 ![1](Attachments/QGIS_1.png)
 
-![2](Attachments/QGIS_2.gif)
-
-![3](Attachments/QGIS_3.jpg)
+![2](Attachments/QGIS_3.jpg)
 
 ## QGIS基础应用
 
