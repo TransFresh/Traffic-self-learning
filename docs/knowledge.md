@@ -60,7 +60,7 @@ Hello!
 
 1. 土木交通材料导论（研讨）
 2. 交通工程基础
-3. 信息与控制基础
+3. [信号与系统](./KnowledgeContent/Basic/信号与系统.md)
 4. [C++ 基础](./KnowledgeContent/Traffic/程序设计与算法语言（C++）.md)
 5. C/Matlab 基础
 
@@ -68,7 +68,7 @@ Hello!
 
 1. 理论力学C
 2. 画法几何及CAD制图
-3. 道路勘测设计
+3. [道路勘测设计](./KnowledgeContent/Traffic/道路勘测设计.md)
 4. [路基路面工程](./KnowledgeContent/Traffic/路基路面工程.md)
 5. [土木工程测量](./KnowledgeContent/Traffic/土木工程测量.md)
 
