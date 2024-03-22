@@ -102,7 +102,7 @@ Hello!
 ### 交通经济学
 
 1. [交通行为分析](./KnowledgeContent/Traffic/交通行为分析.md)
-2. 交通经济学
+2. [交通经济学](./KnowledgeContent/Traffic/交通经济学.md)
 3. 微观经济学
 
 ### 其他
