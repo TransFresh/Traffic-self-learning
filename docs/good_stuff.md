@@ -8,19 +8,19 @@
 
 ## 书籍
 
-[机器学习_周志华]()
+[机器学习_周志华](https://wwv.lanzouh.com/iqYtF1s6nodg)
 
 ```text
 周志华老师的《机器学习》（西瓜书）是机器学习领域的经典入门教材之一。
 ```
 
-[西瓜书配套南瓜书]()
+[西瓜书配套南瓜书](https://wwv.lanzouh.com/isp0U1s6noeh)
 
 ```text
 西瓜书配套南瓜书，部分公式解释
 ```
 
-[ArcGIS地理信息系统详解  (10.1版) ]()
+[ArcGIS地理信息系统详解  (10.1版) ](https://wwv.lanzouh.com/irHoC1s6nnvi)
 
 ```text
 GIS技术与应用课程配套书籍
