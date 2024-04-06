@@ -29,6 +29,8 @@ Hello!
 
 1. 大学物理B I
 2. 大学物理B II
+3. 大学物理实验 I
+4. 大学物理实验 II
 
 <!-- ### 特殊数学知识
 
@@ -127,7 +129,7 @@ Hello!
 17. 道路工程管理与经济
 18. 道路工程施工与监理
 19. 道路养护与管理
-20. 功能路面结构与材料
+20. [功能路面结构与材料](./KnowledgeContent/Traffic/功能路面结构与材料.md)
 21. 交通通信系统概论
 22. 交通系统动态仿真技术
 23. 城市智能交通系统设计
@@ -137,6 +139,7 @@ Hello!
 27. 土木工程测量实习
 28. 道路勘测设计课程设计
 29. 道路工程基础课程设计
+30. [Machine Learning with Python](./KnowledgeContent/Traffic/MachineLearningWIthPython.md)
 
 <!-- ## 计算机类
 
