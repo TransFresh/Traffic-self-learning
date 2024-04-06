@@ -1,8 +1,3 @@
-<!--
- * @Author: CQZ
- * @Date: 2024-03-06 18:27:57
- * @Company: SEU
--->
 # 奇奇怪怪的箱子
 
 总会有一些工具，它们可以很容易的帮助解决眼前的问题，只是还没有被发现
@@ -54,6 +49,18 @@ OpenAI的作品，也是目前使用最多的效果最好的工具，特别是Ch
 > 缺点：每天有对话次数限制
 
 ###  翻译工具
+
+#### CopyTranslator
+
+$\Rightarrow$ Copy=Translate
+
+一个开源的翻译工具，集成了不同翻译API，例如有道、谷歌和百度等等
+
+拥有多种翻译模式，可以固定在屏幕最前端并自动读取粘贴板的内容进行翻译，并支持语言自动识别、增量复制等功能
+
+[项目主页](https://copytranslator.github.io/)
+
+[仓库地址](https://github.com/CopyTranslator/CopyTranslator)
 
 ---
 
