@@ -1,3 +1,8 @@
+<!--
+ * @Author: CQZ
+ * @Date: 2024-03-06 18:27:57
+ * @Company: SEU
+-->
 # 奇奇怪怪的箱子
 
 总会有一些工具，它们可以很容易的帮助解决眼前的问题，只是还没有被发现
@@ -42,7 +47,9 @@ OpenAI的作品，也是目前使用最多的效果最好的工具，特别是Ch
 
 [Poe](https://poe.com/)相当于AI聊天机器人集合地！这里整合了当前多种大语言模型产品，只需要一个账号，就可以使用ChatGPT、Claude、Google-PaLM、Llama等等...
 
-> Poe不需要担心被封号，只需要科学上网，然后搞个邮箱注册即可，非常容易上手！
+> 优点：Poe不需要担心被封号，只需要科学上网，然后搞个邮箱注册即可，非常容易上手！
+>
+> 缺点：每天有对话次数限制
 
 ###  翻译工具
 
@@ -64,11 +71,21 @@ OpenAI的作品，也是目前使用最多的效果最好的工具，特别是Ch
 
 ### SUMO
 
-[SUMO](./ToolsContent/traffic_tools.md#sumo)部分将介绍...
+[SUMO](./ToolsContent/traffic_tools.md#sumo)是一款微观交通仿真软件，以其开源、开放性获得了大量的社区支持，已经成为当前学术和业界应用的流行范例。无论是项目还是科研，你都有可能会需要它！
 
-### VISSIM
+### ABStreet
 
-[VISSIM](./ToolsContent/traffic_tools.md#vissim)部分将介绍...
+[ABStreet](./ToolsContent/ABstreet_exp.md)是另一款微观交通仿真软件，它称自己为“开源交通模拟游戏”，虽然没有SUMO等经典交通仿真软件应用广泛（好像几乎没有），但是该软件在仿真可视化、数据可视化上有着自己的优势，做一些可视化的展示还是蛮不错的~
+
+### QGIS
+
+[QGIS](./ToolsContent/QGIS_adv_tech.md)是一个开源的基础地理信息系统平台软件，它轻量、好看、免费、开源、有Python API，ArcGIS能做的它都能做，ArcGIS不能做的它也能做。网上关于QGIS基础操作的教程很多，但关于QGIS+Python的教程较少，且存在矛盾和错误。本文聚焦在Python中调用QGIS功能，称之为“QGIS高级应用”，内容主要包括：
+
+* 如何在QGIS中调用其内部的Python；
+
+* 如何配置环境，实现在外部调用QGIS Python环境；
+
+* 如何在自己的环境中调用QGIS Python API。
 
 ---
 
