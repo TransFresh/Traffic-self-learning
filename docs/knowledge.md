@@ -30,7 +30,7 @@ Hello!
 1. 大学物理B I
 2. 大学物理B II
 
-### 特殊数学知识
+<!-- ### 特殊数学知识
 
 1. 统计学
    - 数值分析
@@ -52,7 +52,7 @@ Hello!
 6. 深度学习
    - 神经网络
    - 深度学习
-   - 强化学习
+   - 强化学习 -->
 
 ## 交通工程
 
@@ -63,6 +63,7 @@ Hello!
 3. [信号与系统](./KnowledgeContent/Basic/信号与系统.md)
 4. [C++ 基础](./KnowledgeContent/Traffic/程序设计与算法语言（C++）.md)
 5. C/Matlab 基础
+6. 数据结构与算法 B
 
 ### 道路工程基础
 
@@ -96,14 +97,14 @@ Hello!
 
 1. [交通系统分析](./KnowledgeContent/Traffic/交通系统分析.md)
 2. [交通大数据分析（研讨）](./KnowledgeContent/Traffic/交通大数据.md)
-3. 交通时空分析
-4. ArcGis
+<!-- 3. 交通时空分析 -->
+<!-- 4. ArcGis -->
 
 ### 交通经济学
 
 1. [交通行为分析](./KnowledgeContent/Traffic/交通行为分析.md)
 2. [交通经济学](./KnowledgeContent/Traffic/交通经济学.md)
-3. 微观经济学
+<!-- 3. 微观经济学 -->
 
 ### 其他
 
@@ -137,7 +138,7 @@ Hello!
 28. 道路勘测设计课程设计
 29. 道路工程基础课程设计
 
-## 计算机类
+<!-- ## 计算机类
 
 从如何选购一台电脑开始的计算机小白入门之旅~
 
@@ -154,7 +155,7 @@ Hello!
 6. 刷题与竞赛网站
    - LeetCode
    - Kaggle
-7. Latex
+7. Latex -->
 
 ## 思政课程类
 
