@@ -111,7 +111,7 @@ Hello!
 ### 其他
 
 1. 电工电子技术
-2. 微机原理及应用
+2. [微机原理与应用](./KnowledgeContent/Other/微机原理与应用.md)
 3. 港航工程
 4. [虚拟现实技术](./KnowledgeContent/Other/虚拟现实技术.md)
 5. 隧道工程
