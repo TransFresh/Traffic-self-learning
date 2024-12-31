@@ -10,16 +10,18 @@
     ├── Basic
     ├── Traiifc
     ├── ComputerScience
-    └── Politics
+    ├── Politics
+    └── Other
 ```
 
 * `knowledge.md` 文件：整个知识模块的索引，包括不同课程类型的介绍等
 * `KnowledgeContent` 文件夹：知识分享相关的内容
 * `Attachments` 文件夹：知识分享用到的图片等资源文件
 * `Basic` 文件夹: 基础类课程文件夹，包含数学、物理等课程
-* `Traffic` 文件夹: 交通专业课程文件夹，包含本科阶段所学的各种交通类专业课
+* `Traffic` 文件夹: 交通专业课程文件夹，包含各种交通类专业课
 * `ComputerScience` 文件夹: 计算机类课程文件夹，包含交通工程本科阶段涉及到的计算机类课程
 * `Politics` 文件夹: 思政类课程文件夹，包含近代史、马原等思政类课程
+* `Other` 文件夹: 选修课文件夹，包含本科阶段
 
 ## 新增课程
 

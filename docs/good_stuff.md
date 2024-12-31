@@ -6,7 +6,7 @@
 
 这是东南大学交通学院21级班指导带大一期间所写的文档。
 
-## 书籍
+<!-- ## 书籍
 
 [机器学习_周志华](https://wwv.lanzouh.com/iqYtF1s6nodg)
 
@@ -20,17 +20,19 @@
 西瓜书配套南瓜书，部分公式解释
 ```
 
-[ArcGIS地理信息系统详解  (10.1版) ](https://wwv.lanzouh.com/irHoC1s6nnvi)
+[ArcGIS地理信息系统详解 (10.1版)](https://wwv.lanzouh.com/irHoC1s6nnvi)
 
 ```text
 GIS技术与应用课程配套书籍
 ```
+
 [信号与系统第六版上](https://wwv.lanzouh.com/iDdav1t5wzxg)
 [信号与系统第六版下](https://wwv.lanzouh.com/izOEM1t5x0qf)
 
 ```text
 信号与系统第六版，如果遇到这门课电子版对付对付得了，没必要买书学
-```
+``` -->
+
 ## 镜像
 
 正在施工中...
